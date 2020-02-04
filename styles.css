@@ -26,7 +26,7 @@
 footer {
   background-color: #f2f2f2;
   padding: 25px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   right: 0;
   left: 0;
@@ -34,4 +34,46 @@ footer {
 }
 #contacts td{
   padding: .5em;
+}
+
+/*Hover Captions - make them invisible, but appear as hover text for images*/
+.container {
+  position: relative;
+  width: 50%;
+  padding: .5em;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #f2f2f2;
+}
+
+.container:hover .overlay {
+  opacity: .85;
+}
+
+.hoverText {
+  color: black;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
 }
